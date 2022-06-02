@@ -5,6 +5,7 @@ import 'package:plant_app/screens/home/components/recommended_plant.dart';
 import 'package:plant_app/screens/home/components/title_with_customLine.dart';
 
 import 'MoreButtton.dart';
+import 'feature_plants.dart';
 import 'header_with_search_box.dart';
 
 class Body extends StatelessWidget {
@@ -63,6 +64,25 @@ class Body extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+              left: kDefaultPadding,
+              right: kDefaultPadding,
+            ),
+            child: Row(
+              children: <Widget>[
+                const TitleWithCustomLine(text: "Featured Plant"),
+                Spacer(),
+                flat_button(
+                  press: () {},
+                )
+              ],
+            ),
+          ),
+          FeaturePlants(),
+          SizedBox(
+            height: kDefaultPadding,
           ),
         ],
       ),
