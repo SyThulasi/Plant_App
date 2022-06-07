@@ -33,6 +33,45 @@ class Body extends StatelessWidget {
           title: title,
           country: country,
         ),
+        Row(
+          children: <Widget>[
+            SizedBox(
+              width: size.width / 2,
+              height: size.height * 0.065,
+              child: FlatButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(20),
+                  ),
+                ),
+                color: kPrimaryColor,
+                onPressed: () {},
+                child: Text(
+                  "Buy Now!",
+                  style: TextStyle(
+                    color: kBackgroundColor,
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: size.width / 2,
+              height: size.height * 0.065,
+              child: FlatButton(
+                color: kBackgroundColor,
+                onPressed: () {},
+                child: Text(
+                  "Description",
+                  style: TextStyle(
+                    color: kPrimaryColor,
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ],
     );
   }

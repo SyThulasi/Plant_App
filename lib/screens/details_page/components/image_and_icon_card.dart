@@ -17,7 +17,7 @@ class ImageAndIconCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: kDefaultPadding * 2),
+      padding: const EdgeInsets.only(bottom: kDefaultPadding * 1),
       child: SizedBox(
         height: size.height * 0.8,
         child: Row(
