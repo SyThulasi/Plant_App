@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
+import 'package:plant_app/screens/details_page/details_page.dart';
 import 'package:plant_app/screens/home/home_screen.dart';
 
 void main() {
@@ -7,6 +8,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -20,6 +23,10 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomeScreen(),
+      // initialRoute: HomeScreen().id,
+      // routes: {
+      //   DetailScreen().id: (context) => DetailScreen(),
+      // },
     );
   }
 }

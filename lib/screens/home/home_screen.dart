@@ -6,6 +6,7 @@ import '../../components/my_bottom_nav_bar.dart';
 import 'components/body.dart';
 
 class HomeScreen extends StatelessWidget {
+  final String id = "HomeScreen";
   @override
   Widget build(BuildContext context) {
     return Scaffold(

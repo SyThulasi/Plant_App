@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:plant_app/constants.dart';
 import 'package:plant_app/screens/home/components/recommended_plant.dart';
 import 'package:plant_app/screens/home/components/title_with_customLine.dart';
 
+import '../../details_page/details_page.dart';
 import 'MoreButtton.dart';
 import 'feature_plants.dart';
 import 'header_with_search_box.dart';
@@ -43,21 +43,39 @@ class Body extends StatelessWidget {
               children: [
                 RecommendedPlantCard(
                   country: 'Russia',
-                  press: () {},
                   title: "samantha",
                   cost: 400,
                   image: "assets/images/image_1.png",
+                  press: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => DetailScreen(),
+                      ),
+                    );
+                  },
                 ),
                 RecommendedPlantCard(
                   country: 'Srilanka',
-                  press: () {},
+                  press: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => DetailScreen(),
+                      ),
+                    );
+                  },
                   title: "Anushka",
                   cost: 300,
                   image: "assets/images/image_2.png",
                 ),
                 RecommendedPlantCard(
                   country: 'India',
-                  press: () {},
+                  press: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => DetailScreen(),
+                      ),
+                    );
+                  },
                   title: "sunny",
                   cost: 1000,
                   image: "assets/images/image_3.png",
@@ -73,7 +91,7 @@ class Body extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 const TitleWithCustomLine(text: "Featured Plant"),
-                Spacer(),
+                const Spacer(),
                 flat_button(
                   press: () {},
                 )
@@ -81,7 +99,7 @@ class Body extends StatelessWidget {
             ),
           ),
           FeaturePlants(),
-          SizedBox(
+          const SizedBox(
             height: kDefaultPadding,
           ),
         ],

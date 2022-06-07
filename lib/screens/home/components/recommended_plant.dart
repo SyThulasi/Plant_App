@@ -14,7 +14,7 @@ class RecommendedPlantCard extends StatelessWidget {
 
   final String image, title, country;
   final int cost;
-  final Function press;
+  final void Function()? press;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class RecommendedPlantCard extends StatelessWidget {
         children: <Widget>[
           Image.asset(image),
           GestureDetector(
-            onTap: press(),
+            onTap: press,
             child: Container(
               padding: EdgeInsets.all(kDefaultPadding / 2),
               decoration: BoxDecoration(
