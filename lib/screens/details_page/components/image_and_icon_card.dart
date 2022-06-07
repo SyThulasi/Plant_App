@@ -8,14 +8,16 @@ class ImageAndIconCard extends StatelessWidget {
   const ImageAndIconCard({
     Key? key,
     required this.size,
+    required this.image,
   }) : super(key: key);
 
   final Size size;
+  final String image;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: kDefaultPadding * 3),
+      padding: const EdgeInsets.only(bottom: kDefaultPadding * 2),
       child: SizedBox(
         height: size.height * 0.8,
         child: Row(
@@ -54,7 +56,7 @@ class ImageAndIconCard extends StatelessWidget {
                 image: DecorationImage(
                   alignment: Alignment.centerLeft,
                   fit: BoxFit.cover,
-                  image: AssetImage("assets/images/img.png"),
+                  image: AssetImage(image),
                 ),
                 borderRadius: BorderRadius.only(
                   //topLeft: Radius.circular(63),

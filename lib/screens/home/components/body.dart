@@ -46,36 +46,15 @@ class Body extends StatelessWidget {
                   title: "samantha",
                   cost: 400,
                   image: "assets/images/image_1.png",
-                  press: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => DetailScreen(),
-                      ),
-                    );
-                  },
                 ),
                 RecommendedPlantCard(
                   country: 'Srilanka',
-                  press: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => DetailScreen(),
-                      ),
-                    );
-                  },
                   title: "Anushka",
                   cost: 300,
                   image: "assets/images/image_2.png",
                 ),
                 RecommendedPlantCard(
                   country: 'India',
-                  press: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => DetailScreen(),
-                      ),
-                    );
-                  },
                   title: "sunny",
                   cost: 1000,
                   image: "assets/images/image_3.png",
