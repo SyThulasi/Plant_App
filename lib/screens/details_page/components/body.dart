@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plant_app/constants.dart';
+import 'package:plant_app/screens/home/components/title_with_customLine.dart';
 
 import 'icon_card.dart';
+import 'image_and_icon_card.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -12,64 +14,41 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Column(
       children: <Widget>[
+        ImageAndIconCard(size: size),
         Padding(
-          padding: const EdgeInsets.only(bottom: kDefaultPadding * 3),
-          child: SizedBox(
-            height: size.height * 0.8,
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: kDefaultPadding * 3,
+          padding: const EdgeInsets.only(
+              left: kDefaultPadding,
+              right: kDefaultPadding,
+              bottom: kDefaultPadding),
+          child: Row(
+            children: <Widget>[
+              RichText(
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: "Samantha\n".toUpperCase(),
+                      style: Theme.of(context).textTheme.headline5?.copyWith(
+                          color: kTextColor, fontWeight: FontWeight.bold),
                     ),
-                    child: Column(
-                      children: <Widget>[
-                        Align(
-                          alignment: Alignment.topLeft,
-                          child: IconButton(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: kDefaultPadding),
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            icon:
-                                SvgPicture.asset("assets/icons/back_arrow.svg"),
-                          ),
-                        ),
-                        Spacer(),
-                        IconCard(image: "assets/icons/sun.svg"),
-                        IconCard(image: "assets/icons/icon_2.svg"),
-                        IconCard(image: "assets/icons/icon_3.svg"),
-                        IconCard(image: "assets/icons/icon_4.svg"),
-                      ],
-                    ),
-                  ),
+                    TextSpan(
+                      text: "Russia".toUpperCase(),
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: kPrimaryColor,
+                          fontWeight: FontWeight.w300),
+                    )
+                  ],
                 ),
-                Container(
-                  height: size.height * 0.8,
-                  width: size.width * 0.75,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      alignment: Alignment.centerLeft,
-                      fit: BoxFit.cover,
-                      image: AssetImage("assets/images/img.png"),
-                    ),
-                    borderRadius: BorderRadius.only(
-                      //topLeft: Radius.circular(63),
-                      bottomLeft: Radius.circular(63),
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        offset: Offset(0, 10),
-                        blurRadius: 60,
-                        color: kPrimaryColor.withOpacity(0.3),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
+              ),
+              Spacer(),
+              Text(
+                "\$400",
+                style: Theme.of(context)
+                    .textTheme
+                    .headline5
+                    ?.copyWith(color: kPrimaryColor),
+              )
+            ],
           ),
         ),
       ],
