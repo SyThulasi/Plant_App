@@ -22,11 +22,8 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      // initially route to home page
       home: HomeScreen(),
-      // initialRoute: HomeScreen().id,
-      // routes: {
-      //   DetailScreen().id: (context) => DetailScreen(),
-      // },
     );
   }
 }
